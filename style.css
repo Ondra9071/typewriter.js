@@ -1,0 +1,28 @@
+/* NOT REQUIRED */
+h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* REQUIRED */
+
+.animated {
+    animation: blink-caret 1s ease-in-out;
+}
+
+.animated::after {
+    content: "|";
+    display: inline-block;
+    animation: blink-caret 0.75s infinite;
+    visibility: hidden;
+}
+
+.typing::after {
+    visibility: visible;
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
